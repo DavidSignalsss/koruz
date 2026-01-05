@@ -1,0 +1,107 @@
+cat > .gitignore << 'EOF'
+# Koruz - Premium Analog Chorus Plugin
+
+![JUCE](https://img.shields.io/badge/JUCE-8.0.9-blue)
+![macOS](https://img.shields.io/badge/macOS-12+-black)
+![VST3](https://img.shields.io/badge/Format-VST3%20%7C%20AU%20%7C%20Standalone-orange)
+![License](https://img.shields.io/badge/License-MIT-green)
+
+<div align="center">
+  <img src="screenshots/interface.png" alt="Koruz Interface" width="600"/>
+</div>
+
+## 🎵 Features
+
+- **Vintage-Inspired Chorus**: Authentic analog chorus emulation
+- **Real-time Visualization**: Animated string that responds to audio parameters
+- **Professional UI**: Modern dark theme with gold accents
+- **Zero Latency**: Optimized for real-time performance
+- **Multi-Format**: VST3, AU, and Standalone support
+
+## 🎛️ Controls
+
+| Parameter | Range | Description |
+|-----------|-------|-------------|
+| **Rate** | 0.1 - 2.0 Hz | LFO speed control |
+| **Depth** | 0 - 100% | Modulation intensity |
+| **Mix** | 0 - 100% | Dry/Wet balance |
+
+## 🖼️ Screenshots
+
+| Default Settings | High Depth | Maximum Modulation |
+|------------------|------------|-------------------|
+| <img src="screenshots/default.png" width="200"> | <img src="screenshots/high_depth.png" width="200"> | <img src="screenshots/max_modulation.png" width="200"> |
+
+## 🛠️ Development
+
+### Project Structure
+
+Koruz/
+├── Source/
+│ ├── PluginProcessor.h
+│ ├── PluginProcessor.cpp
+│ ├── PluginEditor.h
+│ ├── PluginEditor.cpp
+│ └── resources/
+├── Builds/
+│ └── MacOSX/ (gitignored)
+└── Koruz.jucer
+
+text
+
+### Dependencies
+- **JUCE 8.0.9**
+- **C++17**
+- **macOS 12.0+**
+
+### Building
+```bash
+# Clone the repository
+git clone https://github.com/davidsignals/koruz.git
+cd koruz
+
+# Generate Xcode project
+cmake -B Build -G Xcode
+
+# Open in Xcode
+open Build/Koruz.xcodeproj
+
+📦 Installation
+For End Users
+Download the latest release from Releases
+
+Copy .vst3 to /Library/Audio/Plug-Ins/VST3/
+
+Rescan plugins in your DAW
+
+For Developers
+bash
+git clone https://github.com/davidsignals/koruz.git
+cd koruz
+cmake -B Build -G Xcode
+open Build/Koruz.xcodeproj
+
+🎶 Usage
+Koruz works great on:
+
+Guitars: Add warmth and dimension to clean tones
+
+Synths: Create lush pads and animated leads
+
+Vocals: Subtle thickening and movement
+
+Bass: Add stereo width without phase issues
+
+📄 License
+MIT License - see LICENSE file for details.
+
+👨‍💻 Author
+David Signals
+
+Email: davrxo@gmail.com
+
+GitHub: @davidsignals
+
+<div align="center"> <i>Built with ❤️ using JUCE Framework</i> </div> ```
+
+EOF
